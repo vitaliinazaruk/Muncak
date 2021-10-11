@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $containerWidth;
+    margin: 0 auto;
+    padding: 0 $sidePadding;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+p {
+    margin: 0;
+}
+
+.btn {
+    min-width: $buttonWidth;
+    min-height: $buttonHeight;
+    color: #ffffff;
+    box-shadow: rgb(68, 125, 185) 0px 20px 30px -10px;
+    border-radius: 40px;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn--blue {
+    border: 2px solid #2870db;
+    background-color: #2870db;
+}
+
+.btn--lightblue {
+    border: 2px solid #00aeff;
+    background-color: #00aeff;
+}
+
+.btn--blue:hover {
+    background-color: #ffffff;
+    color: #2870db;;
+    transition: .1s linear;
+}
+
+.btn--lightblue:hover {
+    background-color: #ffffff;
+    color: #00aeff;
+    transition: .1s linear;
+}
+
+.section__title {
+    text-align: center;
+}
+
+.section__title--dark {
+    color: #263238;
+    font-weight: 700;
+}
+
+.section__title--white {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+
+@media (max-width: 1280px) {
+    .btn--blue {
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+    h1 {
+        font-size: 43px;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 481px) {
+
+    .btn {
+        min-width: $buttonWidthTablet;
+        min-height: $buttonHeightTablet;
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 481px) {
+
+    .container {
+        padding: 0 $sidePaddingTablet;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 $sidePaddingMobile;
+    }
+
+    .btn {
+        min-width: $buttonWidthMobile;
+        min-height: $buttonHeightMobile;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}

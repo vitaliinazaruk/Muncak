@@ -1,0 +1,28 @@
+$containerWidth: 1170px;
+$containerLargeWidth: 1440px;
+
+
+$sidePadding: 40px;
+$sidePaddingTablet: 20px;
+$sidePaddingMobile: 12px;
+
+
+$navWidth: 550px;
+$navWidthTablet: 450px;
+
+
+$buttonWidth: 240px;
+$buttonWidthTablet: 200px;
+$buttonWidthMobile: 175px;
+
+$buttonHeight: 80px;
+$buttonHeightTablet: 60px;
+$buttonHeightMobile: 50px;
+
+
+
+@mixin useLargeContainer {
+    & .container {
+        max-width: $containerLargeWidth;
+    }
+}

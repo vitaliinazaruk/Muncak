@@ -1,0 +1,140 @@
+header {
+    @include useLargeContainer;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    user-select: none;
+    color: #1c2056;
+}
+
+
+.header__title::first-letter {
+    color: #2870db;
+}
+
+.header__nav {
+    width: $navWidth;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 35px;
+}
+
+.nav__link::after {
+    content: "";
+    margin-top: 10px;
+    display: block;
+    opacity: 0;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+}
+
+.nav__link:hover::after {
+   opacity: 1;
+   width: 100%;
+   transition: width .1s ease-in;
+}
+
+
+
+// burger
+
+.burger {
+    display: none;
+    padding: 10px 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    font-size: 0;
+    color: transparent;
+    position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: '';
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.burger__item:before {
+    width: 100%;
+    top: -8px;
+}
+
+.burger__item:after {
+    width: 100%;
+    bottom: -8px;
+}
+
+
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+
+    .header__nav {
+        width: $navWidthTablet;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+}
+
+@media (max-width: 1024px) {
+
+    .header__title::first-letter {
+        color: #77aeff;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+// @media (max-width: 1024px) and (min-width: 769px) {
+
+// }
+
+// @media (max-width: 1024px) {
+
+
+// @media (max-width: 768px) and (min-width: 481px) {
+
+
+// }
